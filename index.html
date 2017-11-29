@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Megasite </title>
+</head>
+
+<body>
+	<h1> Galeries</h1>
+	Salut les images
+</body>
+
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+	$.ajax({
+		method:"GET",
+		url:"http://localhost/DMWEB/api.php?route=image",
+		success:function(data) {
+			data = JSON.parse(data);
+			console.log(data.text);
+		}
+	})
+</script>
+</html>
